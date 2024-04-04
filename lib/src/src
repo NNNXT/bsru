@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+
+class Home extends StatelessWidget {
+  static const String route = '/';
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              color: Colors.green,
+              child: const Center(
+                child: Text('data'),
+              ),
+            ),
+            const Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.add,
+                  size: 64,
+                ),
+                Icon(
+                  Icons.add,
+                  size: 64,
+                ),
+                Icon(
+                  Icons.add,
+                  size: 64,
+                ),
+              ],
+            ),
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.add,
+                  size: 64,
+                ),
+                Icon(
+                  Icons.add,
+                  size: 64,
+                ),
+                Icon(
+                  Icons.add,
+                  size: 64,
+                ),
+              ],
+            ),
+            Image.asset('asset/image/cat.jpg'),
+            Image.network(
+              'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ3IPjQaK5Qsoz7cTW1p1N-aXk0FGF-LY8wtBZqvlczOseHgJkcM7OvsF94BUiEN7JJCvklxv7W-wKbT-ArjqcCvWOhYu4TdZ8RVaObLw',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
